@@ -2,7 +2,10 @@
 
 Sistema moderno e completo de controle financeiro pessoal construído com **React, Node.js, Express e PostgreSQL**, utilizando os recursos de nuvem do **Neon** (Database, Neon Auth e Neon Realtime).
 
-![Status do Projeto](https://img.shields.io/badge/Status-Em_Construção-success?style=for-the-badge)
+🌐 **Aplicação Online (Deploy):** [https://fintrack-opal-mu.vercel.app](https://fintrack-opal-mu.vercel.app)
+
+![Status do Projeto](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
+![Deploy](https://img.shields.io/badge/Deploy-Vercel%20%7C%20Render-blueviolet?style=for-the-badge)
 ![Tecnologias](https://img.shields.io/badge/Stack-React%20%7C%20Node.js%20%7C%20PostgreSQL%20%7C%20TailwindCSS-blue?style=for-the-badge)
 
 ---
