@@ -29,6 +29,9 @@ function LinkedinIcon({ className = "w-4 h-4" }) {
   );
 }
 
+// URL da API: usa a variável de ambiente se estiver no ar (Vercel) ou relativo se estiver local
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 export default function App() {
   const [transactions, setTransactions] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -47,9 +50,9 @@ export default function App() {
   const fetchData = async () => {
     try {
       const [transRes, catRes, sumRes] = await Promise.all([
-        fetch('/api/transactions'),
-        fetch('/api/categories'),
-        fetch('/api/summary')
+        fetch(`${API_URL}/api/transactions`),
+        fetch(`${API_URL}/api/categories`),
+        fetch(`${API_URL}/api/summary`)
       ]);
 
       if (transRes.ok) setTransactions(await transRes.json());
@@ -79,7 +82,7 @@ export default function App() {
 
     setIsSubmitting(true);
     try {
-      const res = await fetch('/api/transactions', {
+      const res = await fetch(`${API_URL}/api/transactions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -106,7 +109,7 @@ export default function App() {
   // Excluir Transação
   const handleDeleteTransaction = async (id) => {
     try {
-      const res = await fetch(`/api/transactions/${id}`, { method: 'DELETE' });
+      const res = await fetch(`${API_URL}/api/transactions/${id}`, { method: 'DELETE' });
       if (res.ok) {
         fetchData();
       }
