@@ -9,6 +9,13 @@ client/dist/
 .env.*.local
 .neon
 
+# Arquivos Pessoais e de Agente
+cv/
+Curriculo_Adriel_Dias_Severino.md
+PLANO_PROJETO_FINTRACK.md
+.agents/
+skills-lock.json
+
 # Sistema Operacional e Logs
 npm-debug.log*
 yarn-debug.log*
